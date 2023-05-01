@@ -5,7 +5,7 @@
 - We Are using Snowpack
 
 ```bash
-npx create-snowpack-app . --template @snowpack/app-template-blank-typescript --force
+npx create-snowpack-app my-app --template @snowpack/app-template-blank-typescript --force
 ```
 
 ```text
