@@ -1,24 +1,55 @@
-# New Project
+## Vanila Ts project init
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+- Create {index.html}
+- init package.json
 
-## Available Scripts
+```bash
+npm init --y
+```
 
-### npm start
+- install typescript for dev dependency
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+```bash
+npm i --save-dev typescript
+```
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+- ts config file
 
-### npm run build
+```bash
+npx tsc --init
+```
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
+- change outDir and rootDir in tsconfig.json
+- change module to es6 other wise you cannot add import export
+<p>but it will error because browser can not understand module for solution we need bundler
+</p>
 
-**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.mjs` config file.
+## Lets add bundler for Ts
 
-### Q: What about Eject?
+**There is lots of Bundler Like Snowpack or Webpack**
 
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+**Delete All FILES**
+**Delete All FILES**
+
+- We Are using Snowpack
+
+```bash
+npx create-snowpack-app . --template @snowpack/app-template-blank-typescript --force
+```
+
+```text
+http://localhost:8080
+```
+
+```text
+npm install      Install your dependencies. (We already ran this one for you!)
+npm start        Start your development server.
+npm run build    Build your website for production.
+npm test         Run your tests.
+```
+
+- You have to care about js link will be like this
+
+```html
+<script type="module" src="/dist/index.js"></script>
+```
